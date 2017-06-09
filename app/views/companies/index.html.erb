@@ -1,0 +1,15 @@
+<h1> Company List </h1>
+<hr />
+
+<% if @companies.any? %>
+
+<% @companies.each do |list| %>
+   <p><%= list.name %></p>
+    <p><%= list.location %></p>
+    <% end %>
+<% else %>
+  <h3>No Companies, Please Add One!</h3>
+<% end %>
+<%= link_to 'Add Company', new_company_path, class: 'btn btn-primary' %>
+
+
